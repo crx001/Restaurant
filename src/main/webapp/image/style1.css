@@ -1,0 +1,518 @@
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+#pay_body{
+    height: auto;
+	width: 1200px;
+	margin: 0 auto;
+
+}
+/* header */
+#pay_header_wrapper {
+	width: 1200px;
+	height: 110px;
+	float:left;
+	padding-top:14px;
+}
+.pay_header_btn1{
+	float: left;
+	height: 90px;
+	width: 222px;
+	padding-right: 10px;
+	padding-left: 10px;
+}.pay_header_btn2{
+	float: left;
+	height: 90px;
+	width: 221px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.pay_header_btn3{
+	float: left;
+	height: 90px;
+	width: 222px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.pay_header_btn4{
+	float: left;
+	height: 90px;
+	width: 221px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.pay_header_btn1 a{
+	height: 60px;
+	width: 222px;
+	background-image: url(pay_btn_1.gif);
+	background-repeat: no-repeat;
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+	padding-top: 30px;
+	text-align:center;
+}
+.pay_header_btn1 a:hover{
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #FF0000;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+.pay_header_btn2 a{
+	height: 60px;
+	width: 221px;
+	background-image: url(pay_btn_2.gif);
+	background-repeat: no-repeat;
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+	padding-top: 30px;
+	text-align:center;
+}
+.pay_header_btn2 a:hover{
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #FF0000;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+.pay_header_btn3 a{
+	height: 60px;
+	width: 222px;
+	background-image: url(pay_btn_3.gif);
+	background-repeat: no-repeat;
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #333333;
+	padding-top: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+.pay_header_btn3 a:hover{
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #FF0000;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+.pay_header_btn4 a{
+	height: 60px;
+	width: 221px;
+	background-image: url(pay_btn_4.gif);
+	background-repeat: no-repeat;
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+	padding-top: 30px;
+	text-align:center;
+}
+.pay_header_btn4 a:hover{
+	display:block;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #FF0000;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+/*end of header*/
+
+
+/* search */
+#pay_search_wrapper {
+	width: 500px;
+	height: 40px;
+	float:left;
+	padding-left: 700px;
+	padding-top:30px;
+}
+#pay_search_1{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff672d;
+	float: left;
+	height: 30px;
+	width: 80px;
+}
+#pay_search_1 a{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff672d;
+	text-decoration: none;
+}
+#pay_search_1 a:hover{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#pay_search_2{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff672d;
+	float: left;
+	height: 30px;
+	width: 80px;
+}
+#pay_search_3{
+    font-family: "新宋体";
+	font-size: 18px;
+	color: #ff672d;
+	float: left;
+	height: 30px;
+	width: 75px;
+
+}
+#pay_search_4{
+	float: left;
+	height: 30px;
+	width: 160px;
+}
+#pay_search_4 input{
+	height: 16px;
+	width: 150px;
+	font-family: "新宋体";
+	font-size: 16px;
+	color: #000000;
+	border: 1px solid #000000;
+}
+#pay_search_5{
+	float: left;
+	height: 30px;
+	width: 80px;
+
+}
+#pay_search_5 input{
+	font-family: "新宋体";
+	font-size: 14px;
+	color: #000000;
+	background-color: #ff6328;
+	height: 25px;
+	width: 50px;
+	border:0px;
+	font-weight: bold;
+}
+/* end of search */
+
+
+/* content */
+#pay_content_wrapper{
+	height: auto;
+	width: 1000px;
+	float:left;
+	padding-left:100px;
+	padding-top: 10px;
+}
+#pay_content{
+	float: left;
+	height: auto;
+	width: 1000px;
+}
+#car_content_title{
+	float: left;
+	height: 92px;
+	width: 1000px;
+}
+#car_content_contain{
+	float: left;
+	width: 1000px;
+	height: auto;
+	
+}
+#car_content_contain td{
+    font-family: "新宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-align:center;
+
+}
+#car_content_contain img{
+	padding: 2px;
+	height: 100px;
+	width: 100px;
+	border: 1px solid #CCCCCC;	
+}
+#car_content_contain input{
+	font-family: "新宋体";
+	font-size: 14px;
+	color: #000000;
+	height: 16px;
+	width: 50px;
+	border:1px solid #000000;
+}
+#car_content_btn{
+	float:left;
+	height: 32px;
+	width: 500px;
+	padding-left:400px;
+	padding-top:10px;
+}
+.car_pay_btn1{
+	float: left;
+	height: 34px;
+	width: 119px;
+	padding-right: 5px;
+}
+.car_pay_btn1 input{
+	height: 34px;
+	width: 119px;
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(car_btn_1.gif);
+	background-repeat: no-repeat;
+	border:0px;
+}
+.car_pay_btn{
+	float: left;
+	height: 34px;
+	width: 119px;
+	padding-right: 5px;
+}
+.car_pay_btn input{
+	height: 34px;
+	width: 119px;
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(car_btn.gif);
+	background-repeat: no-repeat;
+	border:0px;
+}
+#confir_title_1{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 600px;
+}
+#confir_title_2{
+	font-family: "新宋体";
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 600px;
+}
+#confir_title_3{
+	font-family: "新宋体";
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 500px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-left-color: #000000;
+	margin-bottom:50px;
+	display:inline;
+}
+#car_content_reg{
+	float: left;
+	height: auto;
+	width: 1000px;
+}
+#content_reg_1{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff6328;
+	float: left;
+	height: 30px;
+	width: 1000px;
+	padding-top:10px;
+}
+#content_reg_2{
+	font-family: "新宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff6328;
+	float: left;
+	height: 30px;
+	width: 1000px;
+	padding-top:10px;
+	
+}
+#content_reg_3{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 800px;
+	padding-top:10px;
+	padding-left:30px;
+	padding-bottom:10px;
+}
+#content_reg_4{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 800px;
+	padding-top:10px;
+	padding-left:13px;
+}
+#content_reg_4 input{
+	font-family: "新宋体";
+	font-size: 16px;
+	color: #000000;
+	height: 18px;
+	width: 200px;
+}
+#content_reg_5{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 800px;
+	padding-top:10px;
+	padding-left:65px;
+}
+#content_reg_5 input{
+	font-family: "新宋体";
+	font-size: 16px;
+	color: #000000;
+	height: 18px;
+	width: 200px;
+}
+#content_reg_6{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: 30px;
+	width: 800px;
+	padding-top:10px;
+	padding-left:65px;
+}
+#content_reg_6 input{
+	font-family: "新宋体";
+	font-size: 16px;
+	color: #000000;
+	height: 18px;
+	width: 200px;
+}
+#content_reg_7{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	float: left;
+	height: auto;
+	width: 700px;
+	padding-top:10px;
+	padding-bottom:30px;
+	padding-left:150px;
+}
+#content_reg_7 input{
+	background-image: url(confi_btn_1.gif);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 82px;
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border:0px;
+}
+#content_reg_3 textarea{
+	height:auto;
+	width: 500px;
+	margin: 0px;
+	padding: 0px;
+}
+#car_cofir_btn{
+	float: left;
+	height: 34px;
+	width: 140px;
+	padding-left:300px;
+}
+#car_cofir_btn input{
+	height: 34px;
+	width: 140px;
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(confi_btn_2.gif);
+	background-repeat: no-repeat;
+	border:0px;
+}
+#car_content_foot{
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	float: left;
+	height: auto;
+	width: 800px;
+	line-height: 200%;
+	padding-left:20px;
+	padding-top:20px;
+}
+/* end of content */
+
+
+/* footer */
+#pay_footer_wrapper{
+    width: 700px;
+	height: 34px;
+	padding-left:500px;
+	padding-top:50px;
+	margin:0 auto;
+}
+.pay_footer_btn{
+	float: left;
+	height: 34px;
+	width: 110px;
+	padding-right:20px;
+}
+.pay_footer_btn input{
+	height: 34px;
+	width: 110px;
+	font-family: "新宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(index_btn_bg.gif);
+	background-repeat: no-repeat;
+	border:0px;
+}
+/* end of footer */

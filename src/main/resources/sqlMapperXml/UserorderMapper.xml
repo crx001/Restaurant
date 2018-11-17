@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.restaurant.mapper.UserorderMapper" >
+  <resultMap id="BaseResultMap" type="com.restaurant.model.Userorder" >
+    <id column="oid" property="oid" jdbcType="INTEGER" />
+    <result column="oname" property="oname" jdbcType="VARCHAR" />
+    <result column="ofood" property="ofood" jdbcType="VARCHAR" />
+    <result column="ofid" property="ofid" jdbcType="INTEGER" />
+    <result column="onum" property="onum" jdbcType="INTEGER" />
+    <result column="oprice" property="oprice" jdbcType="DOUBLE" />
+    <result column="odate" property="odate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    oid, oname, ofood, ofid, onum, oprice, odate
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.restaurant.model.UserorderExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from userorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from userorder
+    where oid = #{oid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from userorder
+    where oid = #{oid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.restaurant.model.UserorderExample" >
+    delete from userorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.restaurant.model.Userorder" >
+    insert into userorder (oid, oname, ofood, 
+      ofid, onum, oprice, 
+      odate)
+    values (#{oid,jdbcType=INTEGER}, #{oname,jdbcType=VARCHAR}, #{ofood,jdbcType=VARCHAR}, 
+      #{ofid,jdbcType=INTEGER}, #{onum,jdbcType=INTEGER}, #{oprice,jdbcType=DOUBLE}, 
+      #{odate,jdbcType=VARCHAR})
+  </insert>
+  <!-- 增加用户菜单 -->
+  <insert id="addUserOrder" parameterType="com.restaurant.model.Userorder" >
+    insert into userorder
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        oid,
+      </if>
+      <if test="oname != null" >
+        oname,
+      </if>
+      <if test="ofood != null" >
+        ofood,
+      </if>
+      <if test="ofid != null" >
+        ofid,
+      </if>
+      <if test="onum != null" >
+        onum,
+      </if>
+      <if test="oprice != null" >
+        oprice,
+      </if>
+      <if test="odate != null" >
+        odate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        #{oid,jdbcType=INTEGER},
+      </if>
+      <if test="oname != null" >
+        #{oname,jdbcType=VARCHAR},
+      </if>
+      <if test="ofood != null" >
+        #{ofood,jdbcType=VARCHAR},
+      </if>
+      <if test="ofid != null" >
+        #{ofid,jdbcType=INTEGER},
+      </if>
+      <if test="onum != null" >
+        #{onum,jdbcType=INTEGER},
+      </if>
+      <if test="oprice != null" >
+        #{oprice,jdbcType=DOUBLE},
+      </if>
+      <if test="odate != null" >
+        #{odate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.restaurant.model.UserorderExample" resultType="java.lang.Integer" >
+    select count(*) from userorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update userorder
+    <set >
+      <if test="record.oid != null" >
+        oid = #{record.oid,jdbcType=INTEGER},
+      </if>
+      <if test="record.oname != null" >
+        oname = #{record.oname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ofood != null" >
+        ofood = #{record.ofood,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ofid != null" >
+        ofid = #{record.ofid,jdbcType=INTEGER},
+      </if>
+      <if test="record.onum != null" >
+        onum = #{record.onum,jdbcType=INTEGER},
+      </if>
+      <if test="record.oprice != null" >
+        oprice = #{record.oprice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.odate != null" >
+        odate = #{record.odate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update userorder
+    set oid = #{record.oid,jdbcType=INTEGER},
+      oname = #{record.oname,jdbcType=VARCHAR},
+      ofood = #{record.ofood,jdbcType=VARCHAR},
+      ofid = #{record.ofid,jdbcType=INTEGER},
+      onum = #{record.onum,jdbcType=INTEGER},
+      oprice = #{record.oprice,jdbcType=DOUBLE},
+      odate = #{record.odate,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.restaurant.model.Userorder" >
+    update userorder
+    <set >
+      <if test="oname != null" >
+        oname = #{oname,jdbcType=VARCHAR},
+      </if>
+      <if test="ofood != null" >
+        ofood = #{ofood,jdbcType=VARCHAR},
+      </if>
+      <if test="ofid != null" >
+        ofid = #{ofid,jdbcType=INTEGER},
+      </if>
+      <if test="onum != null" >
+        onum = #{onum,jdbcType=INTEGER},
+      </if>
+      <if test="oprice != null" >
+        oprice = #{oprice,jdbcType=DOUBLE},
+      </if>
+      <if test="odate != null" >
+        odate = #{odate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where oid = #{oid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.restaurant.model.Userorder" >
+    update userorder
+    set oname = #{oname,jdbcType=VARCHAR},
+      ofood = #{ofood,jdbcType=VARCHAR},
+      ofid = #{ofid,jdbcType=INTEGER},
+      onum = #{onum,jdbcType=INTEGER},
+      oprice = #{oprice,jdbcType=DOUBLE},
+      odate = #{odate,jdbcType=VARCHAR}
+    where oid = #{oid,jdbcType=INTEGER}
+  </update>
+  <!-- 查询用户菜单 -->
+  <select id="selectUserMeun"  parameterType="java.lang.String" resultType="com.restaurant.model.Userorder">
+  select * from userorder 
+  <if test="oname !=null">
+  where oname=#{oname,jdbcType=VARCHAR}
+  </if>
+  </select>
+</mapper>
