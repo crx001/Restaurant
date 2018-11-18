@@ -38,7 +38,6 @@ public class MapperTest {
 	             
 		PageInfo page = new PageInfo(list);
 		System.out.println(page);
-		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-
+	
 	}
 }
